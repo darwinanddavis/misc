@@ -1,5 +1,9 @@
 # nathaniel_lolo_mapdeck
-pacman::p_load(dplyr,mapdeck,here,scales,sf,htmlwidgets)
+pacman::p_load(dplyr,here,scales,sf,htmlwidgets)
+setwd("/Users/malishev/Documents/Data/misc/nathaniel_lolo")
+# devtools::install_github("SymbolixAU/mapdeck") # install latest mapdeck
+library(mapdeck)
+
 
 # data --------------------------------------------------------------------
 point_height <- 10
@@ -8,7 +12,7 @@ latlon <- data.frame("elevation"=1:point_height,
                      "lon"=rep(-84.3773,point_height),
                      "opacity"=rep(150,point_height), # sample(1:255, size = nrow(latlon),replace=T) 
                      "label"=c("Nathaniel and Lolo",rep(NA,point_height-1))
-                     )
+)
 
 # inputs ------------------------------------------------------------------
 my_style <- "mapbox://styles/darwinanddavis/ck980j6wc3knc1imtt565hl5r/draft"
@@ -28,7 +32,11 @@ scales::show_col(colvec)
 fill_opacity <- 150 # 0:255
 auto_highlight <- T # highlight on hover
 
+# opac for hexcode 
+# https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4
+
 # plot --------------------------------------------------------------------
+
 # save to html to view OR viewer > new window
 p <- mapdeck(latlon, 
              style = my_style, #apdeck_style("dark"), # my_style, 
@@ -38,9 +46,22 @@ p <- mapdeck(latlon,
              padding = padding,
              pitch = pitch)
 
-# point cloud
-p <- p %>% 
-  add_pointcloud(lat = "lat", 
+p <- p %>% add_column(lat = "lat",
+                      lon = "lon",
+                      elevation = 1,
+                      elevation_scale = 1*10^10,
+                      radius = 200,
+                      coverage = 0.5,
+                      angle = 180,
+                      fill_colour = "#ffffff",
+                      fill_opacity = 150,
+                      auto_highlight = T,
+                      highlight_colour = "#CC030303",
+                      layer_id = "column_layer")
+p
+  
+# pointcloud layer 
+add_pointcloud(lat = "lat", 
                  lon = "lon",
                  elevation = "elevation",
                  radius = radius, 
