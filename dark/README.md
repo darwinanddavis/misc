@@ -1,8 +1,7 @@
-# DARK TRIVIA   
-
-<center>
-<img src="https://cdna.asoundeffect.com/wp-content/uploads/2018/01/04011935/netflix-dark-sound.jpg" width="200" height="150">
-</center>  
+<div align="center">
+<h1> DARK TRIVIA</h1>   
+    <img src="https://cdna.asoundeffect.com/wp-content/uploads/2018/01/04011935/netflix-dark-sound.jpg" width="100%" height="400" >
+</div>
   
 ## [Take the DARK series trivia](https://darwinanddavis.github.io/misc/dark)  
 
