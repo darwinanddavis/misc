@@ -1,0 +1,119 @@
+<link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+/*chalkboard plugin*/
+<script src="plugin/chalkboard/plugin.js"></script>
+<script>
+    Reveal.initialize({
+        // ...
+        plugins: [ RevealChalkboard ],
+        // ...
+    });
+</script>
+
+<script>
+  Reveal.configure({ showNotes: true });
+</script>
+
+.reveal h1 {
+  color:white;
+  font-family: 'Nixie One';
+}
+.reveal {
+  color:white;
+  font-family: 'Noto Sans HK';
+}
+
+.reveal .slide-background {
+  background:black;
+}
+
+.reveal .slide-background.present {
+    background:black;
+}
+
+.reveal .title {
+  font-size: 500%;
+  text-align: center;
+  vertical-align: center;
+  color:white;
+  letter-spacing: 50px;
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.reveal .small {
+  font-size: 50%;
+  text-align: center;
+
+}
+
+.reveal .answer {
+  color: black;
+}
+
+.reveal section h1 {
+  text-align: left; 
+  font-size: 10em; 
+}
+
+.reveal section h2 {
+  color: #9E9A9A;
+  text-align: center; 
+}
+
+.reveal section h3,
+.reveal section h4 {
+  color: #E7E6E6;
+  text-align: left;
+ }
+
+.reveal section h5 {
+  font-size: 1em;
+}
+
+.reveal section p {
+  text-align: left;
+}
+
+.reveal hr {
+  width:25%;
+  text-align:center;
+}
+
+
+.imgincrement {
+	color: white;
+}
+
+.reveal section img { 
+  background:none; 
+  border:none; 
+  box-shadow:none; 
+  }
+
+/*blur background images */
+/*.backgrounds {
+     -webkit-filter: blur(3px);
+     -moz-filter: blur(3px);
+     -o-filter: blur(3px);
+     -ms-filter: blur(3px);
+     filter: blur(3px);
+ }*/
+
+.reveal .intro {
+  background-position: center;
+  background-size: 10%;
+}
+
+/*change title slide 
+<style>
+.slide-background:first-child {
+  background-color: #00FF00;
+}
+</style>*/
+
+
+}

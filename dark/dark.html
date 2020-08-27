@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="dark_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="dark_files/reveal.js-3.3.0.1/css/theme/night.css" id="theme">
+
+<style type="text/css">
+.reveal section img {
+  background: rgba(255, 255, 255, 0.85);
+}
+</style>
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal .slide-menu-button {
+      left: 105px !important;
+    }
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="style/styles.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <link href="dark_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+    <link href="dark_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="section" class="slide level1" data-background="https://cdna.asoundeffect.com/wp-content/uploads/2018/01/04011935/netflix-dark-sound.jpg" data-background-size="99.99% 99.99% " data-background-repeat="no-repeat">
+<h1></h1>
+<p><link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet"> <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100&display=swap" rel="stylesheet"> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"></p>
+<style>
+.reveal h1 {
+  color:white;
+  font-family: 'Nixie One';
+}
+.reveal,
+.reveal h2 {
+  color:white;
+  font-family: 'Noto Sans HK';
+}
+</style>
+<div class="title">
+DARK<br>TRIVIA
+</div>
+</section>
+<section class="slide level1">
+
+<div class="title">
+WARNING<br>
+</div>
+<center>
+<h2>
+SPOILER ALERT
+</h2>
+</center>
+<center>
+<h2>
+Contains spoilers for all three seasons of DARK
+</h2>
+</center>
+</section>
+<section id="section-1" class="slide level1">
+<h1>1</h1>
+<p>In season 2, episode 4, there are two pictures hanging on the left wall of Aleksander’s office at the nuclear power plant. <br> <br> Write the chemical formula for the black radioactive material Cesium 137 Jonas first uses to time travel.</p>
+</section>
+<section id="section-2" class="slide level1">
+<h1>2</h1>
+<p>Who is Charlotte’s husband?</p>
+</section>
+<section id="section-3" class="slide level1">
+<h1>3</h1>
+<p>Who is Bernd Doppler's grandson?</p>
+</section>
+<section id="section-4" class="slide level1">
+<h1>4</h1>
+<p>What is the surname of the redhead boy that goes missing in 2019?<br />
+A. Obendorf<br />
+B. Burgendorf<br />
+C. Odendorf<br />
+D. Torbendorf</p>
+</section>
+<section id="section-5" class="slide level1">
+<h1>5</h1>
+<p>Which famous person does Mikkel idolise?</p>
+</section>
+<section id="section-6" class="slide level1">
+<h1>6</h1>
+<p>What does Regina Tiedermann do for a living?</p>
+</section>
+<section id="section-7" class="slide level1">
+<h1>7</h1>
+<p>Where was the old blind man in the carriage going?</p>
+</section>
+<section id="section-8" class="slide level1">
+<h1>8</h1>
+<p>What is the significance of November 4, 2019?</p>
+</section>
+<section id="section-9" class="slide level1">
+<h1>9</h1>
+<p>After Katharina time travels, who tells her where to find Ulrich?<br />
+A. Jonas<br />
+B. Hannah<br />
+C. Egon</p>
+</section>
+<section id="section-10" class="slide level1">
+<h1>10</h1>
+<p>Who is Eric Obendorf’s brother?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-11">Question 11</h2>
+<p>What time does Mikkel go missing?<br />
+A. 10:13<br />
+B. 10:14<br />
+C. 10:15</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-12">Question 12</h2>
+<p>What does <em>Sic Mundus Creatus Est</em> stand for?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-13">Question 13</h2>
+<p>What is on Helge's pendant?<br />
+<br><br> Bonus point: What does it represent?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-14">Question 14</h2>
+<p>What piece of evidence does Charlotte confiscate from the police station after Mikkel’s disappearance?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-15">Question 15</h2>
+<p>Who are Hannah’s children?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-16">Question 16</h2>
+<p>Which characters appear in all three worlds?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-17">Question 17</h2>
+<p>How does Ulrich identify Mads at the morgue?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-18">Question 18</h2>
+Draw the <em>Sic Mundus Creatus Est</em> symbol.<br />
+
+<p class="small">
+Use the chalkboard option on the bottom left of the screen
+</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-19">Question 19</h2>
+<p>What colour is the plastic bag that Hannah uses to store Aleks' gun?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-20">Question 20</h2>
+<p>What is Silja’s surname?</p>
+<p>A. Tiedermann<br />
+B. Kahnwald<br />
+C. Kruger</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-21">Question 21</h2>
+<p>In season 2 after Ulrich breaks out of the mental institution and reconnects with Mikkel, what's the first thing they do?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-22">Question 22</h2>
+<p>What time does Katharina tell Ulrich to meet her to escape?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-23">Question 23</h2>
+<p>How do you spell police in German?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-24">Question 24</h2>
+<p>List the people Martha and Jonas’ son kills</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-25">Question 25</h2>
+<p>What does 80's Ulrich have written on the back of his jacket?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-26">Question 26</h2>
+<p>What is Jonas’ dad's name?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-27">Question 27</h2>
+<p>What direction do the stairs go in Katharina's house in World 2?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-28">Question 28</h2>
+<p>When someone time travels, what type of animals are found dead?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-29">Question 29</h2>
+<p>Who is Agnes' dad?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-30">Question 30</h2>
+<p>Who is the first person Jonas encounters when he first time travels?</p>
+<p>A. Hannah Kruger<br />
+B. Egon Tiedermann<br />
+C. Charlotte Doppler</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-31">Question 31</h2>
+<p>What is Claudia’s dog's name?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-32">Question 32</h2>
+<p>What colour is Hannah's dress at Ulrich and Katharina’s house party?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-33">Question 33</h2>
+<p>What is Hannah's job?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-34">Question 34</h2>
+<p>What is the name of the book that H.G. Tannhaus writes?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-35">Question 35</h2>
+<p>Middle-aged Jonas receives a letter from second world Martha. What does he do with it?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-36">Question 36</h2>
+<p>Who is Aleksander Kohler's brother?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-37">Question 37</h2>
+<p>What does Franziska hide in the metal tin she stores under the train tracks?</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-38">Question 38</h2>
+<p>What is H.G. Tannhaus’ son’s name?<br />
+A. Marrion<br />
+B. Markell<br />
+C. Marek</p>
+</section>
+<section class="slide level1">
+
+<h2 id="question-39">Question 39</h2>
+<p>What sentence does Adam say to Jonas to reveal that they are the same person (in German)?</p>
+<!-- ________________________________________________________ slide break -->
+</section>
+<section class="slide level1">
+
+<h2 id="congratulations">Congratulations</h2>
+<center>
+<img src="https://pbs.twimg.com/media/DowcASGX0AEyk-V?format=jpg&name=medium" width="400" height="400">
+</center>
+</section>
+<section class="slide level1">
+
+<center>
+You scored
+</center>
+<br> <br> <br>
+<hr style="hr">
+<center style="font-size: 5em;">
+50
+</center>
+<!-- end body -->
+<!-- ____________________________________________________________________________ -->
+</section>
+    </div>
+  </div>
+
+  <script src="dark_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="dark_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+        menu: {
+          custom: false,
+          themes: false,
+          transitions: false
+        },
+
+
+
+        chalkboard: {
+        },
+
+        keyboard: {
+          67: function() { RevealChalkboard.toggleNotesCanvas() },    // toggle notes canvas when 'c' is pressed
+          66: function() { RevealChalkboard.toggleChalkboard() }, // toggle chalkboard when 'b' is pressed
+          46: function() { RevealChalkboard.clear() },    // clear chalkboard when 'DEL' is pressed
+           8: function() { RevealChalkboard.reset() },    // reset chalkboard data on current slide when 'BACKSPACE' is pressed
+          68: function() { RevealChalkboard.download() }, // downlad recorded chalkboard drawing when 'd' is pressed
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'dark_files/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+          { src: 'dark_files/reveal.js-3.3.0.1/plugin/chalkboard/chalkboard.js', async: true },
+          { src: 'dark_files/reveal.js-3.3.0.1/plugin/menu/menu.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "dark_files/mathjax-local/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

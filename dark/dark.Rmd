@@ -1,0 +1,326 @@
+---
+title: 
+header-includes: \usepackage{float}
+always_allow_html: yes
+output:
+  revealjs::revealjs_presentation:
+    css: style/styles.css
+    smart: true
+    theme: night
+    incremental: true
+    center: true
+    transition: slide
+    background-transition: fade
+    mathjax: local # null
+    self_contained: false
+    slide_level: 1
+    reveal_plugins: ["notes", "chalkboard", "menu"] 
+    autoSlide: true
+---
+
+
+# {data-background="https://cdna.asoundeffect.com/wp-content/uploads/2018/01/04011935/netflix-dark-sound.jpg" data-background-size="99.99% 99.99% " data-background-repeat="no-repeat"}
+
+<link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style>
+.reveal h1 {
+  color:white;
+  font-family: 'Nixie One';
+}
+.reveal,
+.reveal h2 {
+  color:white;
+  font-family: 'Noto Sans HK';
+}
+</style>
+
+<div class="title">DARK<br>TRIVIA</div>
+
+---   
+
+<div class="title">WARNING<br></div>
+<center><h2>SPOILER ALERT</h2></center>
+<center><h2>Contains spoilers for all three seasons of DARK</h2></center>
+
+--- 
+
+# 1
+
+In season 2, episode 4, there are two pictures hanging on the left wall of Aleksander’s office at the nuclear power plant. 
+<br> <br>
+Write the chemical formula for the black radioactive material Cesium 137 Jonas first uses to time travel.  
+
+---
+
+# 2
+
+Who is Charlotte’s husband? 
+
+
+# 3
+
+Who is Bernd Doppler's grandson?
+
+# 4
+
+What is the surname of the redhead boy that goes missing in 2019?  
+A. Obendorf  
+B. Burgendorf  
+C. Odendorf  
+D. Torbendorf  
+
+# 5
+
+Which famous person does Mikkel idolise?  
+
+# 6
+
+What does Regina Tiedermann do for a living?
+
+# 7
+
+Where was the old blind man in the carriage going?
+
+# 8  
+
+What is the significance of November 4, 2019?
+
+# 9
+
+After Katharina time travels, who tells her where to find Ulrich?   
+A. Jonas    
+B. Hannah    
+C. Egon    
+
+# 10
+
+Who is Eric Obendorf’s brother?
+
+---    
+
+## Question 11  
+
+What time does Mikkel go missing?   
+A. 10:13  
+B. 10:14  
+C. 10:15  
+
+---    
+
+## Question 12  
+
+What does _Sic Mundus Creatus Est_ stand for?  
+
+---    
+
+## Question 13
+
+
+What is on Helge's pendant?    
+<br><br>
+Bonus point: What does it represent?  
+
+---    
+
+## Question 14
+
+What piece of evidence does Charlotte confiscate from the police station after Mikkel’s disappearance?  
+
+---    
+
+## Question 15 
+
+Who are Hannah’s children?
+
+---    
+
+## Question 16  
+
+Which characters appear in all three worlds?
+
+---    
+
+## Question 17 
+
+How does Ulrich identify Mads at the morgue?
+
+---    
+
+## Question 18 
+
+Draw the _Sic Mundus Creatus Est_ symbol.  
+<p class="small">Use the chalkboard option on the bottom left of the screen</p>
+
+---    
+
+## Question 19
+
+What colour is the plastic bag that Hannah uses to store Aleks' gun?
+
+---    
+
+## Question 20
+
+What is Silja’s surname?  
+
+A. Tiedermann  
+B. Kahnwald  
+C. Kruger  
+
+---    
+
+## Question 21  
+
+In season 2 after Ulrich breaks out of the mental institution and reconnects with Mikkel, what's the first thing they do? 
+
+---    
+
+## Question 22
+
+What time does Katharina tell Ulrich to meet her to escape?
+
+---    
+
+## Question 23
+
+How do you spell police in German?
+
+---    
+
+## Question 24
+
+List the people Martha and Jonas’ son kills
+
+---    
+
+## Question 25
+
+What does 80's Ulrich have written on the back of his jacket? 
+
+---    
+
+## Question 26 
+
+What is Jonas’ dad's name?  
+
+---    
+
+## Question 27
+
+
+What direction do the stairs go in Katharina's house in World 2?
+
+---    
+
+## Question 28
+
+
+When someone time travels, what type of animals are found dead?
+
+---    
+
+## Question 29
+
+Who is Agnes' dad?
+
+---    
+
+## Question 30  
+
+Who is the first person Jonas encounters when he first time travels?  
+
+A. Hannah Kruger  
+B. Egon Tiedermann  
+C. Charlotte Doppler  
+
+---    
+
+## Question 31
+
+What is Claudia’s dog's name?
+
+---    
+
+## Question 32  
+
+What colour is Hannah's dress at Ulrich and Katharina’s house party?
+
+---    
+
+## Question 33
+
+What is Hannah's job?
+
+---    
+
+## Question 34  
+
+What is the name of the book that H.G. Tannhaus writes?
+
+---    
+
+## Question 35
+
+Middle-aged Jonas receives a letter from second world Martha. What does he do with it?  
+
+---    
+
+## Question 36  
+
+Who is Aleksander Kohler's brother?
+
+---    
+
+## Question 37  
+
+What does Franziska hide in the metal tin she stores under the train tracks?
+
+---    
+
+## Question 38  
+
+What is H.G. Tannhaus’ son’s name?  
+A. Marrion  
+B. Markell  
+C. Marek  
+
+---    
+
+## Question 39
+
+What sentence does Adam say to Jonas to reveal that they are the same person (in German)?
+
+
+
+
+<!-- ________________________________________________________ slide break -->
+
+
+---  
+
+## Congratulations  
+
+<center>
+<img src="https://pbs.twimg.com/media/DowcASGX0AEyk-V?format=jpg&name=medium" width="400" height="400">
+</center>
+
+
+---
+
+<center>You scored</center>
+<br>
+<br>
+<br>
+<hr style="hr">
+<center style="font-size: 5em;">50</center>
+
+
+
+
+
+
+<!-- end body -->  
+<!-- ____________________________________________________________________________ -->
