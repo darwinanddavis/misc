@@ -17,7 +17,7 @@
 </script>
 
 .reveal h1 {
-  color:white;
+  color: #E2DCC8;
   font-family: 'Nixie One';
 }
 .reveal {
@@ -46,8 +46,6 @@
 
 .reveal .small {
   font-size: 50%;
-  text-align: center;
-
 }
 
 .reveal .answer {
