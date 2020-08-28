@@ -41,9 +41,8 @@ output:
 
 ---   
 
-<div class="title">WARNING<br></div>  
 <center>
-  <h2>SPOILER ALERT</h2>
+  <span style="font-size:500%;"><h4>SPOILER ALERT</h4></span>
   <h2>Contains spoilers for all three seasons of DARK</h2>
 </center>  
 
@@ -56,9 +55,11 @@ Press `b` for blackboard to write your answers
 </center>
 
 
-# {data-background="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dark-1556312644.png?crop=0.934xw:0.907xh;0.0381xw,0.0931xh&resize=600:*" data-background-size="99.99% 99.99% " data-background-repeat="no-repeat"}
+# {data-background="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dark-1556312644.png?crop=0.934xw:0.907xh;0.0381xw,0.0931xh&resize=900:*" data-background-size="99.99% 99.99% " data-background-repeat="no-repeat"}
 
-<div class="title">READY?</div>
+<!-- <div class="title">READY?</div> -->
+
+<center><br><br><br><br><h2> Did <br>you <br>study? </h2></center>
 
 
 # 1
