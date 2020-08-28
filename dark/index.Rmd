@@ -27,7 +27,7 @@ output:
 
 <style>
 .reveal h1 {
-  color:white;
+  color: #E2DCC8;
   font-family: 'Nixie One';
 }
 .reveal,
@@ -41,19 +41,31 @@ output:
 
 ---   
 
-<div class="title">WARNING<br></div>
-<center><h2>SPOILER ALERT</h2></center>
-<center><h2>Contains spoilers for all three seasons of DARK</h2></center>
+<div class="title">WARNING<br></div>  
+<center>
+  <h2>SPOILER ALERT</h2>
+  <h2>Contains spoilers for all three seasons of DARK</h2>
+</center>  
 
---- 
+---  
+
+<center>
+Press `f` for fullscreen     
+Press `b` for blackboard to write your answers   
+`DELETE` will clear current slide     
+</center>
+
+
+# {data-background="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dark-1556312644.png?crop=0.934xw:0.907xh;0.0381xw,0.0931xh&resize=600:*" data-background-size="99.99% 99.99% " data-background-repeat="no-repeat"}
+
+<div class="title">READY?</div>
+
 
 # 1
 
 In season 2, episode 4, there are two pictures hanging on the left wall of Aleksander’s office at the nuclear power plant. 
 <br> <br>
 Write the chemical formula for the black radioactive material Cesium 137 Jonas first uses to time travel.  
-
----
 
 # 2
 
@@ -99,70 +111,50 @@ C. Egon
 
 Who is Eric Obendorf’s brother?
 
----    
-
-## Question 11  
+# 11
 
 What time does Mikkel go missing?   
 A. 10:13  
 B. 10:14  
 C. 10:15  
 
----    
-
-## Question 12  
+# 12
 
 What does _Sic Mundus Creatus Est_ stand for?  
 
----    
-
-## Question 13
-
+# 13
 
 What is on Helge's pendant?    
 <br><br>
 Bonus point: What does it represent?  
 
----    
-
-## Question 14
+# 14  
 
 What piece of evidence does Charlotte confiscate from the police station after Mikkel’s disappearance?  
 
----    
-
-## Question 15 
+# 15
 
 Who are Hannah’s children?
 
----    
-
-## Question 16  
+# 16
 
 Which characters appear in all three worlds?
 
----    
-
-## Question 17 
+# 17
 
 How does Ulrich identify Mads at the morgue?
 
----    
+# 18
 
-## Question 18 
+Draw the _Sic Mundus Creatus Est_ symbol.    
 
-Draw the _Sic Mundus Creatus Est_ symbol.  
-<p class="small">Use the chalkboard option on the bottom left of the screen</p>
+Use the chalkboard option on the bottom left of the screen.    
 
----    
-
-## Question 19
+# 19
 
 What colour is the plastic bag that Hannah uses to store Aleks' gun?
 
----    
-
-## Question 20
+# 20  
 
 What is Silja’s surname?  
 
@@ -170,65 +162,43 @@ A. Tiedermann
 B. Kahnwald  
 C. Kruger  
 
----    
-
-## Question 21  
+# 21
 
 In season 2 after Ulrich breaks out of the mental institution and reconnects with Mikkel, what's the first thing they do? 
 
----    
-
-## Question 22
+# 22
 
 What time does Katharina tell Ulrich to meet her to escape?
 
----    
-
-## Question 23
+# 23 
 
 How do you spell police in German?
 
----    
+# 24  
 
-## Question 24
+List the people Martha and Jonas’ son kills. 
 
-List the people Martha and Jonas’ son kills
-
----    
-
-## Question 25
+# 25  
 
 What does 80's Ulrich have written on the back of his jacket? 
 
----    
-
-## Question 26 
+# 26  
 
 What is Jonas’ dad's name?  
 
----    
-
-## Question 27
-
+# 27
 
 What direction do the stairs go in Katharina's house in World 2?
 
----    
-
-## Question 28
-
+# 28  
 
 When someone time travels, what type of animals are found dead?
 
----    
-
-## Question 29
+# 29  
 
 Who is Agnes' dad?
 
----    
-
-## Question 30  
+# 30  
 
 Who is the first person Jonas encounters when he first time travels?  
 
@@ -236,64 +206,44 @@ A. Hannah Kruger
 B. Egon Tiedermann  
 C. Charlotte Doppler  
 
----    
-
-## Question 31
+# 31  
 
 What is Claudia’s dog's name?
 
----    
-
-## Question 32  
+# 32  
 
 What colour is Hannah's dress at Ulrich and Katharina’s house party?
 
----    
-
-## Question 33
+# 33  
 
 What is Hannah's job?
 
----    
-
-## Question 34  
+# 34  
 
 What is the name of the book that H.G. Tannhaus writes?
 
----    
-
-## Question 35
+# 35  
 
 Middle-aged Jonas receives a letter from second world Martha. What does he do with it?  
 
----    
-
-## Question 36  
+# 36  
 
 Who is Aleksander Kohler's brother?
 
----    
-
-## Question 37  
+# 37  
 
 What does Franziska hide in the metal tin she stores under the train tracks?
 
----    
-
-## Question 38  
+# 38
 
 What is H.G. Tannhaus’ son’s name?  
 A. Marrion  
 B. Markell  
 C. Marek  
 
----    
-
-## Question 39
+# 39  
 
 What sentence does Adam say to Jonas to reveal that they are the same person (in German)?
-
-
 
 
 <!-- ________________________________________________________ slide break -->
@@ -307,7 +257,6 @@ What sentence does Adam say to Jonas to reveal that they are the same person (in
 <img src="https://pbs.twimg.com/media/DowcASGX0AEyk-V?format=jpg&name=medium" width="400" height="400">
 </center>
 
-
 ---
 
 <center>You scored</center>
@@ -316,6 +265,35 @@ What sentence does Adam say to Jonas to reveal that they are the same person (in
 <br>
 <hr style="hr">
 <center style="font-size: 5em;">50</center>
+
+---  
+
+<center>  
+Press `d` to download your written answers  
+</center>  
+
+
+---  
+
+## Created by 
+## Matt Malishev  & Nicole Malishev      
+
+<center>
+<a style="color:#E2DCC8;" href="https://twitter.com/darwinanddavis"> 
+<img style="vertical-align:middle" src="img/t.png" width="60" height="60">
+</a>
+<a style="color:#E2DCC8;" href="https://github.com/darwinanddavis"> 
+<img style="vertical-align:middle" src="img/g.png" width="60" height="60">
+</a>
+<a style="color:#E2DCC8;" href="https://instagram.com/darwinanddavis"> 
+<img style="vertical-align:middle" src="img/i.png" width="60" height="60">
+</a>
+<a style="color:#E2DCC8;" href="https://darwinanddavis.github.io/DataPortfolio/"> 
+<img style="vertical-align:middle" src="img/h.png" width="60" height="60">
+</a>
+<br>
+<span style="color:#E2DCC8;">@darwinanddavis</span>
+</center>
 
 
 
