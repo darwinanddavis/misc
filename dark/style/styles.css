@@ -62,10 +62,10 @@
   text-align: center; 
 }
 
-.reveal section h3,
-.reveal section h4 {
+.reveal h3,
+.reveal h4 {
   color: #E7E6E6;
-  text-align: left;
+  text-align: center;
  }
 
 .reveal section h5 {
