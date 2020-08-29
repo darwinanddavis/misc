@@ -252,7 +252,7 @@ C. Charlotte Doppler
 
 # 31  
 
-Who is this character? (3 points)             
+Who is this character? (4 points)             
 <center>
 <img style="vertical-align:middle" src="img/p.jpeg" width="250" height="300">
 </center>
@@ -289,8 +289,9 @@ What does Franziska hide in the metal tin she stores under the train tracks?
 
 # 38
 
-What is H.G. Tannhaus’ son’s name?      
-(1 point)      
+What is H.G. Tannhaus’ son’s name?        
+(1 point)  
+
 A. Marrion  
 B. Markell  
 C. Marek  
