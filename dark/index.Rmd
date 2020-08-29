@@ -27,7 +27,7 @@ output:
 
 <style>
 .reveal h1 {
-  color: #E2DCC8;
+  color: #F7ECC8;
   font-family: 'Nixie One';
 }
 .reveal,
@@ -37,7 +37,7 @@ output:
 }
 </style>
 
-<div class="title">DARK<br>TRIVIA</div>
+<div class="title">DARK<br>EXAM</div>
 
 ---   
 
@@ -61,103 +61,134 @@ Press `b` for blackboard to write your answers
 
 <center><br><br><br><br><h2> Did <br>you <br>study? </h2></center>
 
+---  
 
-# 1
+<div style="font-size:50%;"><h1>Warm up</h1></div>  
 
 In season 2, episode 4, there are two pictures hanging on the left wall of Aleksander’s office at the nuclear power plant. 
 <br> <br>
 Write the chemical formula for the black radioactive material Cesium 137 Jonas first uses to time travel.  
 
+
+# 1
+
+What is Jonas’ dad's name?  
+(1 point)       
+
 # 2
 
-Who is Charlotte’s husband? 
-
-
+Who is Charlotte’s husband?   
+(1 point)      
+ 
 # 3
 
-Who is Bernd Doppler's grandson?
+How do you spell police in German?  
+(1 point)       
 
 # 4
 
-What is the surname of the redhead boy that goes missing in 2019?  
+What is the surname of the redhead boy that goes missing in 2019?    
+(1 point)  
+<br>
 A. Obendorf  
 B. Burgendorf  
 C. Odendorf  
-D. Torbendorf  
+D. Torbendorf
 
 # 5
 
 Which famous person does Mikkel idolise?  
+(1 point)    
 
 # 6
 
-What does Regina Tiedermann do for a living?
+What does Regina Tiedermann do for a living?  
+(1 point)    
 
 # 7
 
-Where was the old blind man in the carriage going?
+Where was the old blind man in the carriage going?  
+(2 points)    
 
 # 8  
 
-What is the significance of November 4, 2019?
+What is the significance of November 4, 2019?   
+(3 points)            
 
 # 9
 
-After Katharina time travels, who tells her where to find Ulrich?   
+After Katharina time travels, who tells her where to find Ulrich?     
+(1 point)      
+<br>
 A. Jonas    
 B. Hannah    
 C. Egon    
 
 # 10
 
-Who is Eric Obendorf’s brother?
+Who does young Noah kill in front of the cave?    
+(2 points)      
 
 # 11
 
 What time does Mikkel go missing?   
+(2 points)
+<br>  
 A. 10:13  
 B. 10:14  
 C. 10:15  
 
 # 12
 
-What does _Sic Mundus Creatus Est_ stand for?  
+What does _Sic Mundus Creatus Est_ mean?    
+(2 points)     
 
 # 13
 
 What is on Helge's pendant?    
+(1 point)  
 <br><br>
-Bonus point: What does it represent?  
+Bonus point: What does it represent?    
+(1 point)    
 
 # 14  
 
-What piece of evidence does Charlotte confiscate from the police station after Mikkel’s disappearance?  
+Who is this character? (5 points)       
+<center>
+<img style="vertical-align:middle"src="https://vignette.wikia.nocookie.net/dark-netflix/images/5/5c/Heinrich_tannhaus_light.png/revision/latest/scale-to-width-down/350?cb=20200708033743" width="400" height="250">
+</center>
 
-# 15
+# 15  
 
-Who are Hannah’s children?
+Who are Hannah’s children?  
+(3 points)    
 
 # 16
 
-Which characters appear in all three worlds?
+Which characters appear in all three worlds?  
+(3 points)      
 
 # 17
 
-How does Ulrich identify Mads at the morgue?
+How does Ulrich identify Mads at the morgue?  
+(1 point)      
 
 # 18
 
 Draw the _Sic Mundus Creatus Est_ symbol.    
+(1 point)      
 
 Use the chalkboard option on the bottom left of the screen.    
 
 # 19
 
-What colour is the plastic bag that Hannah uses to store Aleks' gun?
+How many pages does Claudia rip out of the _Sic Mundus_ book in the bunker at the end of season 3?   
+(3 points)      
 
 # 20  
 
-What is Silja’s surname?  
+What is Silja’s surname?   
+(3 points)    
 
 A. Tiedermann  
 B. Kahnwald  
@@ -165,43 +196,55 @@ C. Kruger
 
 # 21
 
-In season 2 after Ulrich breaks out of the mental institution and reconnects with Mikkel, what's the first thing they do? 
+In season 2 after Ulrich breaks out of the psychiatric hospital and reconnects with Mikkel, what's the first thing they do?   
+(2 points)    
 
 # 22
 
-What time does Katharina tell Ulrich to meet her to escape?
+What time does Katharina tell Ulrich to meet her to escape?  
+(2 points)    
 
 # 23 
 
-How do you spell police in German?
+What is Bernd Doppler's relation to Helge Doppler?      
+(2 points)      
 
 # 24  
 
-List the people Martha and Jonas’ son kills. 
+What is Hannah's job?    
+(1 point)    
 
 # 25  
 
-What does 80's Ulrich have written on the back of his jacket? 
+What does 80's Ulrich have written on the back of his jacket?   
+(2 points)    
 
 # 26  
 
-What is Jonas’ dad's name?  
+Whose room is this? (5 points)      
+<center>
+<img style="vertical-align:middle" src="img/room.jpeg" width="400" height="300">
+</center>
 
 # 27
 
-What direction do the stairs go in Katharina's house in World 2?
+What direction do the stairs go in Katharina's house in World 2?   
+(1 point)        
 
 # 28  
 
-When someone time travels, what type of animals are found dead?
+When someone time travels, what type of animals are found dead?  
+(2 points)    
 
 # 29  
 
-Who is Agnes' dad?
+Who is Agnes' dad?  
+(2 points)    
 
 # 30  
 
 Who is the first person Jonas encounters when he first time travels?  
+(1 point)    
 
 A. Hannah Kruger  
 B. Egon Tiedermann  
@@ -209,42 +252,86 @@ C. Charlotte Doppler
 
 # 31  
 
-What is Claudia’s dog's name?
-
+Who is this character? (3 points)             
+<center>
+<img style="vertical-align:middle" src="img/p.jpeg" width="250" height="300">
+</center>
+  
 # 32  
 
-What colour is Hannah's dress at Ulrich and Katharina’s house party?
+What colour is Hannah's dress at Ulrich and Katharina’s house party?  
+(2 points)    
 
 # 33  
 
-What is Hannah's job?
+List the people Martha and Jonas’ son kills.     
+(3 points)    
 
 # 34  
 
-What is the name of the book that H.G. Tannhaus writes?
+What is the name of the book that H.G. Tannhaus writes?  
+(2 points)    
 
 # 35  
 
 Middle-aged Jonas receives a letter from second world Martha. What does he do with it?  
+(2 points)        
 
 # 36  
 
-Who is Aleksander Kohler's brother?
+Who is Aleksander Kohler's brother?  
+(3 points)        
 
 # 37  
 
-What does Franziska hide in the metal tin she stores under the train tracks?
+What does Franziska hide in the metal tin she stores under the train tracks?  
+(2 points)    
 
 # 38
 
-What is H.G. Tannhaus’ son’s name?  
+What is H.G. Tannhaus’ son’s name?      
+(1 point)      
 A. Marrion  
 B. Markell  
 C. Marek  
 
 # 39  
 
-What sentence does Adam say to Jonas to reveal that they are the same person (in German)?
+What sentence does Adam say to Jonas to reveal that they are the same person (in German)?  
+(3 points)        
+
+# 40  
+
+Where does Katharina's name come from?  
+(2 points)    
+
+# 41  
+
+Name all the characters who work in the police force.  
+(3 points)    
+
+# 42  
+
+What colour is the plastic bag that Hannah uses to store Aleks' gun?  
+(3 points)      
+
+# 43   
+
+What piece of evidence does Charlotte confiscate from the police station after Mikkel’s disappearance?  
+(3 points)      
+  
+# 44  
+
+Whose car is this? (5 points)      
+<center>
+<img style="vertical-align:middle" src="img/car.jpeg" width="400" height="300">
+</center>
+
+# 45  
+
+What is Claudia’s dog's name?  
+(3 points)    
+
 
 
 <!-- ________________________________________________________ slide break -->
@@ -258,21 +345,20 @@ What sentence does Adam say to Jonas to reveal that they are the same person (in
 <img src="https://pbs.twimg.com/media/DowcASGX0AEyk-V?format=jpg&name=medium" width="400" height="400">
 </center>
 
----
+<!-- --- -->
 
-<center>You scored</center>
-<br>
-<br>
-<br>
-<hr style="hr">
-<center style="font-size: 5em;">50</center>
+<!-- <center>You scored</center> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <hr style="hr"> -->
+<!-- <center style="font-size: 5em;">50</center> -->
 
 ---  
 
 <center>  
 Press `d` to download your written answers  
 </center>  
-
 
 ---  
 
@@ -296,9 +382,6 @@ Press `d` to download your written answers
 <span style="color:#E2DCC8;">@darwinanddavis</span>
 </center>
   
-
-
-
 
 
 <!-- end body -->  
