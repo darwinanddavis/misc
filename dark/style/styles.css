@@ -16,10 +16,12 @@
   Reveal.configure({ showNotes: true });
 </script>
 
-.reveal h1 {
-  color: #E2DCC8;
-  font-family: 'Nixie One';
+
+.reveal section {
+  text-align: left;
+  margin-top: 2em;
 }
+
 .reveal {
   color:white;
   font-family: 'Noto Sans HK';
@@ -49,17 +51,21 @@
 }
 
 .reveal .answer {
-  color: black;
+  position: absolute;
+  height: 5px;
 }
 
 .reveal section h1 {
   text-align: left; 
   font-size: 10em; 
+  color: #E2DCC8;
+  font-family: 'Nixie One';
 }
 
 .reveal section h2 {
   color: #9E9A9A;
   text-align: center; 
+  font-family: 'Noto Sans HK';
 }
 
 .reveal h3,
