@@ -28,13 +28,14 @@ output:
 <style>
 .reveal section {
   text-align: left;
-  margin-top: 3.5em;
+  margin-top: 2.8em;
 }
 </style>
 
-<center>
-<div class="title">DARK  TRIVIA</div>
-</center>
+
+
+<div class="title">DARK TRIVIA</div>
+
 
 ---  
 
@@ -299,7 +300,7 @@ Thus the world was created
 <section>  
 What is on Helge's pendant?    
 (1 point)  
-<br><br>
+<br>
 Bonus point: What does it represent?    
 (1 point)    
 </section>
@@ -807,7 +808,7 @@ Gretchen
 
 <center>  
 Press `d` to download your written answers    
-[Return to start to check your answers](#6)  
+[Return to beginning to check your answers](#6)  
 </center>  
 
 ---  

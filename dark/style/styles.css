@@ -16,10 +16,9 @@
   Reveal.configure({ showNotes: true });
 </script>
 
-
 .reveal section {
   text-align: left;
-  margin-top: 2em;
+  margin-top: 2.8em;
 }
 
 .reveal {
@@ -41,9 +40,10 @@
   vertical-align: center;
   color:white;
   letter-spacing: 50px;
-  line-height: 1.5;
+  line-height: 2;
   display: inline-block;
   vertical-align: middle;
+  margin-top: -1em;
 }
 
 .reveal .small {
@@ -55,14 +55,14 @@
   height: 5px;
 }
 
-.reveal section h1 {
+.reveal h1 {
   text-align: left; 
   font-size: 10em; 
   color: #E2DCC8;
   font-family: 'Nixie One';
 }
 
-.reveal section h2 {
+.reveal h2 {
   color: #9E9A9A;
   text-align: center; 
   font-family: 'Noto Sans HK';
@@ -74,11 +74,11 @@
   text-align: center;
  }
 
-.reveal section h5 {
+.reveal h5 {
   font-size: 1em;
 }
 
-.reveal section p {
+.reveal p {
   text-align: left;
 }
 
