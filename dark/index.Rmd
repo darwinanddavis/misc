@@ -14,7 +14,7 @@ output:
     mathjax: local # null
     self_contained: false
     slide_level: 1
-    reveal_plugins: ["notes", "chalkboard", "menu"] 
+    reveal_plugins: ["menu", "chalkboard"] 
     autoSlide: true
 ---
 
@@ -32,8 +32,6 @@ output:
 }
 </style>
 
-
-
 <div class="title">DARK TRIVIA</div>
 
 
@@ -45,7 +43,7 @@ Matt Malishev & Nicole Malishev
 <a style="color:#E2DCC8;" href="https://twitter.com/darwinanddavis"> 
 <img style="vertical-align:middle" src="img/t.png" width="60" height="60">
 </a>
-<a style="color:#E2DCC8;" href="https://github.com/darwinanddavis"> 
+<a style="color:#E2DCC8;" href="https://github.com/darwinanddavis/misc/tree/gh-pages/dark"> 
 <img style="vertical-align:middle" src="img/g.png" width="60" height="60">
 </a>
 <a style="color:#E2DCC8;" href="https://instagram.com/darwinanddavis"> 
@@ -821,7 +819,7 @@ Matt Malishev & Nicole Malishev
 <a style="color:#E2DCC8;" href="https://twitter.com/darwinanddavis"> 
 <img style="vertical-align:middle" src="img/t.png" width="60" height="60">
 </a>
-<a style="color:#E2DCC8;" href="https://github.com/darwinanddavis"> 
+<a style="color:#E2DCC8;" href="https://github.com/darwinanddavis/misc/tree/gh-pages/dark"> 
 <img style="vertical-align:middle" src="img/g.png" width="60" height="60">
 </a>
 <a style="color:#E2DCC8;" href="https://instagram.com/darwinanddavis"> 
