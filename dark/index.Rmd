@@ -39,7 +39,10 @@ output:
 
 <center>
 Created by     
-Matt Malishev & Nicole Malishev            
+Matt Malishev & Nicole Malishev      
+<a style="color:#E2DCC8;" href="https://darwinanddavis.github.io/DataPortfolio/"> 
+<img style="vertical-align:middle" src="img/h.png" width="60" height="60">
+</a>
 <a style="color:#E2DCC8;" href="https://twitter.com/darwinanddavis"> 
 <img style="vertical-align:middle" src="img/t.png" width="60" height="60">
 </a>
@@ -48,9 +51,6 @@ Matt Malishev & Nicole Malishev
 </a>
 <a style="color:#E2DCC8;" href="https://instagram.com/darwinanddavis"> 
 <img style="vertical-align:middle" src="img/i.png" width="60" height="60">
-</a>
-<a style="color:#E2DCC8;" href="https://darwinanddavis.github.io/DataPortfolio/"> 
-<img style="vertical-align:middle" src="img/h.png" width="60" height="60">
 </a>
 <br>
 <span style="color:#E2DCC8;">@darwinanddavis</span>
@@ -296,7 +296,7 @@ Thus the world was created
 # 13
 
 <section>  
-What is on Helge's pendant?    
+What is on Helene Alber's pendant?    
 (1 point)  
 <br>
 Bonus point: What does it represent?    
@@ -816,7 +816,10 @@ Press `d` to download your written answers
 
 <center>
 Created by     
-Matt Malishev & Nicole Malishev          
+Matt Malishev & Nicole Malishev      
+<a style="color:#E2DCC8;" href="https://darwinanddavis.github.io/DataPortfolio/"> 
+<img style="vertical-align:middle" src="img/h.png" width="60" height="60">
+</a>
 <a style="color:#E2DCC8;" href="https://twitter.com/darwinanddavis"> 
 <img style="vertical-align:middle" src="img/t.png" width="60" height="60">
 </a>
@@ -825,9 +828,6 @@ Matt Malishev & Nicole Malishev
 </a>
 <a style="color:#E2DCC8;" href="https://instagram.com/darwinanddavis"> 
 <img style="vertical-align:middle" src="img/i.png" width="60" height="60">
-</a>
-<a style="color:#E2DCC8;" href="https://darwinanddavis.github.io/DataPortfolio/"> 
-<img style="vertical-align:middle" src="img/h.png" width="60" height="60">
 </a>
 <br>
 <span style="color:#E2DCC8;">@darwinanddavis</span>
