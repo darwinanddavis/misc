@@ -49,9 +49,6 @@ Matt Malishev & Nicole Malishev
 <a style="color:#E2DCC8;" href="https://github.com/darwinanddavis/misc/tree/gh-pages/dark"> 
 <img style="vertical-align:middle" src="img/g.png" width="60" height="60">
 </a>
-<a style="color:#E2DCC8;" href="https://instagram.com/darwinanddavis"> 
-<img style="vertical-align:middle" src="img/i.png" width="60" height="60">
-</a>
 <br>
 <span style="color:#E2DCC8;">@darwinanddavis</span>
 </center>
@@ -825,9 +822,6 @@ Matt Malishev & Nicole Malishev
 </a>
 <a style="color:#E2DCC8;" href="https://github.com/darwinanddavis/misc/tree/gh-pages/dark"> 
 <img style="vertical-align:middle" src="img/g.png" width="60" height="60">
-</a>
-<a style="color:#E2DCC8;" href="https://instagram.com/darwinanddavis"> 
-<img style="vertical-align:middle" src="img/i.png" width="60" height="60">
 </a>
 <br>
 <span style="color:#E2DCC8;">@darwinanddavis</span>
