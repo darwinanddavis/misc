@@ -72,7 +72,7 @@ Matt Malishev & Nicole Malishev
 
 <center>
 Press `f` for fullscreen     
-Press `b` or use the pencil button on bottom left for blackboard to write your answers   
+Press `b` or use the pencil button on bottom left for blackboard to write your answers or just write your answers on paper       
 `DELETE` will clear current slide     
 </center>
 
