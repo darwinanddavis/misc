@@ -105,9 +105,9 @@ Calculate the monoisotopic mass for the black radioactive material Cesium 137 Jo
 Play through the entire quiz first, then return to each question to check your answers.<br><br> Press the right arrow to begin.   
 </section>
 
-# {data-background="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dark-1556312644.png?crop=0.934xw:0.907xh;0.0381xw,0.0931xh&resize=900:*" data-background-size="99.99% 99.99% " data-background-repeat="no-repeat" data-transition="fade-in fade-out"}
+# {data-background="https://img.wallpapersafari.com/desktop/1920/1080/80/32/AIDXVa.jpg" data-background-size="99.99% 99.99% " data-background-repeat="no-repeat" data-transition="fade-in fade-out"}
 
-<center><br><br><br><br><h2> Ready? </h2></center>
+<p style = "font-size: 120px; text-align: right;"> Ready? </p>
 
 # 1   
 
