@@ -1,12 +1,7 @@
 # Data viz projects v. 13 
 
-### Matt Malishev      
-### @darwinanddavis 
-        
-File extensions:     
-.R    
-.Rmd    
-.html      
+### Matt Malishev  
+### @darwinanddavis  
 
 ******      
 
@@ -15,7 +10,6 @@ File extensions:
 <h3> 
   <a href="https://darwinanddavis.github.io/misc/dark/#/section">Netflix DARK trivia</a>
 </h3>
-
 <div align="center">  
     <img src="https://cdna.asoundeffect.com/wp-content/uploads/2018/01/04011935/netflix-dark-sound.jpg" width="100%" height="600" >
 </div>
@@ -29,7 +23,7 @@ File extensions:
 Medal tally data for the Tokyo 2020 Olympics showing individual medal count by country and medal count per event. Data webscraped from the offical Olympics website. See the `r` folder for full medal tally data download.  
 
 <div align="center">
-  <img src="img/olympics.png" width="100%">
+  <img src="olympics/img/olympics.png" width="100%">
 </div>
 
 <br>   
