@@ -1,0 +1,408 @@
+---
+params:
+  title: "Tokyo 2020 Olympics"
+  author: "Matt Malishev"
+  social: "@darwinanddavis"    
+  primary: "#C09F68"
+  secondary: "#EFEFEF"
+  here: "r"
+  imgdir: "plots"
+  img0: "img/olympics.pdf"
+  img1: "img/olympics_full.png"
+  img3: "img/diving.png"
+  img4: "img/olympics2.png"
+  country0: "australia"
+  country1: "brazil"
+  country2: "poland"
+  country3: "kenya"
+  country4: "turkey"
+  country5: "colombia"
+  github: "https://github.com/darwinanddavis/misc/tree/gh-pages/olympics"      
+  pictogram: "https://www.theolympicdesign.com/olympic-design/pictograms/tokyo-2020/"
+output: 
+  html_document:
+    css: css/style.css
+    includes:
+      before_body: header.html
+      after_body: footer.html
+---
+
+<!-- to do  -->
+<!-- - for write up, use col/linetype highlighting to show patterns https://jokergoo.github.io/circlize_book/book/the-chorddiagram-function.html -->
+
+<!-- css for tabs -->
+<style type="text/css">
+
+a{
+	color: `r params$primary`;
+}
+
+a:hover{ 
+	color: `r params$secondary`;
+}
+
+img{
+  border: 2px solid `r params$primary`;
+  vertical-align: middle;  
+}
+
+.nav>li>a{
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.nav-pills>li>a:hover{
+  background: `r params$primary`;
+  opacity:0.7;
+  color: `r params$secondary`;
+}
+
+.nav-pills>li.active>a{
+  background: `r params$primary`;
+}
+
+.nav-pills>li.active>a:hover{
+  background: `r params$primary`;
+}
+
+</style>
+
+```{r, set-options, echo = F, cache = T, message=F}
+options(width=25,tinytex.verbose = TRUE, width.cutoff=25)
+knitr::opts_chunk$set(
+ eval = F, # run all code
+ echo = T, # show code chunks in output 
+ tidy = T, # make output as tidy
+ message = F,  # mask all messages
+ warning = F, # mask all warnings 
+ size="small", # set code chunk size,
+ tidy.opts=list(width.cutoff=25) # set width of code chunks in output
+)
+
+# tinytex::install_tinytex()
+# require(tinytex)
+# install.packages("pacman")
+# require(pacman)
+```
+
+# <span style="font-size: 200%;">`r params$title`</span> {.tabset .tabset-fade .tabset-pills}  
+
+#### Tallying Olympic medal data by individual event per country  
+#### `r params$author` | `r params$social`    
+
+<!-- tab break --------------------------------------------- -->
+## Introduction
+
+```{r, eval = T, echo = F, message=F, results = "hide"}
+# load r datasets and code chunks 
+require(dplyr)
+paste0(params$here) %>% 
+  list.files(full.names = T) %>%
+  sapply(knitr::read_chunk)
+```
+
+This project uses webscraping, data analysis, and plotting tools in `R` to access, wrangle, analyse, and plot Tokyo Olympics 2020 medal tally data to generate the graphics used in the below infographic.  
+
+Step-by-step instructions and code are detailed in the header tabs. All code, datasets, and source files are also available on [Github](`r params$github`).    
+<br><br>
+
+### [See full hi-res infographic](`r params$img0`)    
+
+<br><br>
+
+<!-- img  -->
+<center><img src=`r params$img1`> </center>
+
+<br><br>
+
+<!-- img  -->
+<center><img class = "remove-border" src=`r stringr::str_subset(list.files(params$imgdir, full.names = T), params$country0)`> </center>
+
+<!-- row 1 -->
+<div class = "row">
+  <div class = "col-md-8"> <!-- img  -->
+  <center><img class = "remove-border" src=`r stringr::str_subset(list.files(params$imgdir, full.names = T), params$country1)`> </center>
+  
+  </div>
+  
+  <div class = "col-md-4"> 
+  <br><br><br>
+
+### Data cover gold, silver, and bronze medal tallies per event (47 events) for each of the 93 competing nations.   
+
+<br>   
+
+### Each plot represents the total medal tally for an individual nation split into events.       
+
+  </div>
+</div>
+
+<!-- row 2 -->
+<div class = "row">
+  <div class = "col-md-4 right-just"> <!-- img  -->
+  
+  <br><br>   
+
+### The plot sectors are divided into the three medal types (upper section) and events (lower section). Link thickness represents the number of medals for each event
+
+<br><br>  
+
+###  This blog also covers how to add custom images as sector labels for chord plots.   
+
+  </div>
+  <div class = "col-md-8"> 
+  <center><img class = "remove-border" src=`r stringr::str_subset(list.files(params$imgdir, full.names = T), params$country2)`> </center>
+  </div>
+</div>
+
+<!-- img -->
+<center><img class = "remove-border" src=`r stringr::str_subset(list.files(params$imgdir, full.names = T), params$country3)`> </center>
+<center><img class = "remove-border" src=`r stringr::str_subset(list.files(params$imgdir, full.names = T), params$country4)`> </center>
+<center><img src=`r params$img4`> </center>
+
+<!-- tab break --------------------------------------------- -->
+## Setup
+
+`R` session   
+```{r, eval = T, echo = F}
+sessionInfo()
+```
+
+Load packages and set data parameters        
+```{r, eval = F}
+<<packages>>
+<<setup>>
+```
+
+## Webscrape data  
+
+Write some functions to webscrape the medal tally data from [Olympics.com](https://olympics.com/tokyo-2020/en/).  
+```{r, eval = F}
+<<webscrape>>
+```
+
+## Build datasets   
+
+The next step is turning the webscraped data into consistent and usable data formats for analysis in `R`.     
+
+The below chunks access the individual web url for medal tally data of each country or Olympic event. The final section accesses a site for getting hi-res country flags to add to each plot.      
+
+Medal tally data by country. Webscraped data are stored in lists, then saved to the local dir.     
+```{r, eval = F}
+<<data1>>
+```
+
+Now the same for medal tally data by event.    
+```{r, eval = F}
+<<data2>>
+```
+
+Finally, get hi-res country flags to add to each chord plot.  
+```{r, eval = F}
+<<data3>>
+```
+
+## Build plots    
+
+Load the Olympic medal data. The code for getting these datasets is found in the **Build datasets** section.        
+```{r, eval = F}
+<<load_data>>
+```
+
+Now plot and save the medal tally per sport for each country from the country dataset. Here is the order of steps.  
+- Convert the raw data into a usable table for the chord plot  
+- Match the colour palette to the chord plot sectors  
+- Plot the base chord plot  
+- Add custom sector labels    
+- Add a country label and flag stamp from the flags data frame to each plot (you can also use {`ggflags`} here)  
+- Save each plot to your local dir       
+```{r, eval = F}
+<<plot>>
+```
+
+This generates a plot for each country appended with their ranked medal tally order.   
+```{r, echo = F}
+here::here("plots") %>% list.files() %>% head(20)
+```
+
+
+<center><img class = "remove-border" src=`r stringr::str_subset(list.files(params$imgdir, full.names = T), params$country5)`> </center>
+
+## Plot features
+
+### Using custom images as sector labels  
+
+It's also possible to use images as labels for the sectors in chord plots, as well as different images for each sector. 
+
+<!-- img -->
+<center><img class = "remove-border" src=`r params$img3`> </center>
+
+**Option 1**       
+Use the same image for each plot sector.     
+```{r, eval = F}
+# first intialise plot
+
+# then add custom images  
+# convert png to raster  
+img_convert <- function(img){ # add raster img as chord labels
+  imgr <- img %>% magick::image_read() %>% as.raster() # convert img to raster layer
+  imgr %>% return()} 
+imgr <- img_convert("image.png")
+
+# add image and label to initialised plot
+circos.track(track.index = 1, 
+             panel.fun = function(x, y){
+               circos.raster(image = imgr, # add image
+                             x = CELL_META$xcenter,
+                             y = CELL_META$ycenter,
+                             width = "1.5mm", height = "1.5mm",
+                             facing = "downward")
+               circos.text(x = CELL_META$xcenter, # add text
+                           y = CELL_META$ycenter,
+                           labels =  CELL_META$sector.index,
+                           facing = "clockwise", niceFacing = T,
+                           ### for image and text
+                           cex = 0.8, col = col_lab,
+                           adj = c(0.2, 0) # label xy position
+               )}
+             , bg.border = NA) # set bg to NA
+```
+
+**Option 2**   
+For using differnet images for each plot sector, I used an image list and indexed each list element to correspond to the appropriate plot sector data.       
+
+This example uses event data (Diving as an example) and plots each country's flag as a custom image for the respective sector of the chord plot.    
+
+First, select data to plot.    
+```{r, select-data, eval = F}
+fh <- "Diving" # plot by event
+source("medals_event.Rda")
+d <- elist[[fh]]
+dtab <- d %>% select(NOCCode,Gold,Silver,Bronze) %>% # convert df to table for chord
+  melt() %>%
+  uncount(value) %>% # expand table by number of each medal 
+  select(variable,NOCCode) # reorder for colpal
+colpal <- c(colv_pal,rep(col_lab,dtab[,2] %>% unique %>% length)) # match colpal to data length
+
+```
+
+Now we can set the plot parameters and initialise the plot. Once the base chord plot is drawn, we can then add text and image labels for each sector.   
+
+Setup plot parameters.  
+```{r, plot-params, eval=F}
+# plot save 
+require(circlize)
+png(here::here("test") %>% paste0("/",fh,".png"),width = width, height = height, units = "cm", bg = "transparent", res = 250)
+
+circos.clear()
+par(mar = rep(2, 4),mfrow = c(1, 1),family = "HersheySans",font = 2) # plot pars
+circos.par(start.degree = -185, # chord setup 
+           gap.degree = 2, track.margin = c(-0.1, 0.1), 
+           points.overflow.warning = F,
+           track.height = 0.2)
+circos.par(cell.padding =c(0.02, 0, 0.02, 0))
+
+```
+
+Now plot the base chord plot.  
+```{r, plot-init, eval = F}
+# plot 
+chordDiagram(dtab,
+             grid.col = colpal,
+             transparency = 0.3,
+             directional = 1, # 1 = link origin is from sectors
+             diffHeight  = -0.05,
+            link.border = NA, # add border
+             annotationTrack = c("grid"
+                                 # ,"name" # to check name placment
+             ),
+             annotationTrackHeight = c(0.05, 0.1),
+             big.gap = 5, small.gap = 2, # gaps between sectors
+             link.sort = T, link.decreasing = T, # link overlap
+             link.largest.ontop = T,
+             preAllocateTracks = list(track.height = 0.1)
+)
+
+```
+
+Once the plot is active, we can add custom labels and images. You can skip this step and use the names in your data table for the plot sectors by using `annotationTrack = "name"` in the above plot code. However, for custom labels and/or images, we add these features to the base chord plot manually.     
+```{r, eval = F}
+# add custom image per sector (here you can instead use {ggflags})
+# select custom images
+fid <- c("china","great-britain","united-states","canada","germany","australia","mexico","roc")
+fidn <- flags_df %>% filter(name %in% fid) %>% arrange(name = factor(name,levels = fid)) %>% pull(flag)
+
+# create img labels
+imgl <- as.list(fidn) # match imgs to events in elist
+imglist <- lapply(imgl,img_convert) # apply convert to raster func
+imgtab <- c(as.list(rep(NA,3)),imglist) # add country and empty imgs for three medal sectors  
+names(imgtab) <- get.all.sector.index() # get names from plot sector indices 
+
+# plot params 
+ylim <- 0.7
+im <- "4mm"
+cex <- 0.5
+circos.track(track.index = 1, 
+             panel.fun = function(x,y){ # add text/img per sector
+               circos.raster(x = CELL_META$xcenter, 
+                             y = ylim,
+                             image = imgtab[[CELL_META$sector.numeric.index]], # add image by indexing each cell sector from img df (imgtab) 
+                             width = im, height = im,
+                             facing = "clockwise",niceFacing = T)
+               circos.text(x = CELL_META$xcenter, 
+                           y = ylim + 1.2, 
+                           # remove medal sector labels but keep other sectors
+                           labels =  ifelse(CELL_META$sector.numeric.index <= dtab[,1] %>% unique %>% length, NA, CELL_META$sector.index),
+                           facing = "clockwise", niceFacing = T, cex = cex, col = col_lab
+               )}
+             , bg.border = NA) # set bg to NA
+
+# add icon stamp 
+xx <- 0.2; yy <- 0.8
+grid.raster(picid, x=xx, y=yy, width=0.1, height = 0.1) # add country flag
+text(-1, yy+0.2, piclab, col = col_lab, cex = 1, pos = 4)
+
+dev.off()
+
+```
+
+For this case study, you can also use the official [Olympics pictograms](`r params$pictogram`) as sector images      
+```{r, plot-img2, eval = F}
+<<pictograms>>
+```
+
+### Image modifcation    
+
+Because your image conversion function for your webscraped images converts images to rasters (in this case the Olympic pictograms and country flags), you can also add some code that replaces the base colours in the raster grid with custom colours.     
+```{r,plot-mod1}
+img_convert <- function(img){
+  imgr <- img %>% magick::image_read() %>% as.raster() # convert img to raster layer
+  imgr[imgr == "#002163ff"] <- col_lab # change main img color
+  imgr %>% return()
+}
+```
+
+### Alternative versions for custom sector labels/images  
+
+You can also loop through each sector index of the plot and index the relevant image from your label/image data frame. If you want the label/image to be centered in the middle of the chord sector, you need to access the built-in `get.cell.meta.data()` and `get.all.sector.index()` functions in {circlize} (see below).     
+```{r, eval = F}
+# rm origin (medal) labels and cycle through labels/imgs
+circos.track(track.index = 1, 
+for(sl in seq_along(get.all.sector.index())){ # apply custom labels to sectors
+  xlim = get.cell.meta.data("xcenter")
+  circos.text(x = mean(xlim), # center label
+              y = ylim/2,
+              sector.index = get.all.sector.index()[sl],
+              labels =  labtab[[sl]],
+              facing = "clockwise", niceFacing = T,
+              cex = 0.75, col = col_lab,
+              adj = c(0, 0.5) # nudge xy position
+  )}
+, bg.border = NA) # set bg to NA
+```
+
+## References 
+
+Download code from [Github](`r params$github`)    
+The [{circlize}](https://jokergoo.github.io/circlize_book/book/introduction.html) package         
