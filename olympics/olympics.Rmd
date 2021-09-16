@@ -53,32 +53,11 @@ img{
 
 .nav-pills>li>a:hover{
   background: `r params$primary`;
-  opacity:0.7;
   color: `r params$secondary`;
+  opacity:0.7;
 }
 
-.nav-link  {
-  background: `r params$primary`;
-}
-
-.nav-pills>li.active {
-  background: `r params$primary`;
-}
-
-.nav-pills>li.active>a  {
-  background: `r params$primary`;
-}
-
-.nav-pills>li.active>a:hover {
-  background: `r params$primary`;
-}
-
-.nav-link:(.active){
-  background: `r params$primary`;
-  background-color: `r params$primary`;
-}
-
-.nav-link:not(.active) {
+.nav-pills>li>a:focus, .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
   background: `r params$primary`;
   background-color: `r params$primary`;
 }
