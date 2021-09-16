@@ -1,16 +1,9 @@
-<link href="//fonts.googleapis.com/css?family=Quicksand:300,400,600,700&amp;lang=en" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-body{
-  font-family: 'Quicksand';
-}
 
 /* set main container for parallax */
 .main-container {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Quicksand';
 }
 
 /* set remaining text content container */
@@ -22,7 +15,6 @@ body{
       line-height: 1.7;
       padding-right: 15px;
       padding-left: 15px;
-      font-family: 'Quicksand';
 }
 
 body{
@@ -34,7 +26,18 @@ h1, h4{
 }
 
 a{
-  color: ;
+  color: #C09F68;
+  background: none; 
+}
+
+a:hover{ 
+  color: #C09F68;
+  background: none; 
+}
+
+img{
+  border: 2px solid #C09F68;
+  vertical-align: middle;  
 }
 
 .right-just {

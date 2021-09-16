@@ -21,32 +21,15 @@ params:
   pictogram: "https://www.theolympicdesign.com/olympic-design/pictograms/tokyo-2020/"
 output: 
   html_document:
+    theme: "cosmo"
     css: css/style.css
     includes:
       before_body: header.html
       after_body: footer.html
 ---
 
-<link href="//fonts.googleapis.com/css?family=Quicksand:300,400,600,700&amp;lang=en" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
 <!-- css for tabs -->
 <style type="text/css">
-
-a{
-	color: `r params$primary`;
-	background: none; 
-}
-
-a:hover{ 
-	color: `r params$secondary`;
-	background: none; 
-}
-
-img{
-  border: 2px solid `r params$primary`;
-  vertical-align: middle;  
-}
 
 .nav>li>a{
     position: relative;
@@ -101,7 +84,12 @@ paste0(params$here) %>%
   sapply(knitr::read_chunk)
 ```
 
-This project uses webscraping, data analysis, and plotting tools in `R` to access, wrangle, analyse, and plot Tokyo Olympics 2020 medal tally data to generate the graphics used in the below infographic.  
+This project uses webscraping, data analysis, and plotting tools in `R` to access, wrangle, analyse, and plot Tokyo Olympics 2020 medal tally data to generate the graphics used in the below infographic. 
+
+**Topics**  
+- Webscraping data with `R`    
+- Making chord plots        
+- Adding custom images as sector labels for chord plots      
 
 Step-by-step instructions and code are detailed in the header tabs. All code, datasets, and source files are also available on [Github](`r params$github`).    
 <br>
@@ -143,11 +131,14 @@ Step-by-step instructions and code are detailed in the header tabs. All code, da
   
   <br><br>   
 
-### The plot sectors are divided into the three medal types (upper section) and events (lower section). Link thickness represents the number of medals for each event
+### The plot sectors are divided into the three medal types (upper section) and events (lower section).   
+
+<br><br>   
+
+### Link thickness represents the number of medals for each event
 
 <br><br>  
-
-###  This blog also covers how to add custom images as sector labels for chord plots.   
+ 
 
   </div>
   <div class = "col-md-8"> 
