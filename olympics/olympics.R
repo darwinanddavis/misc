@@ -3,12 +3,15 @@
 # @darwinanddavis
 
 # pcks ----------------------------------------------------------
-pacman::p_load(rvest,xml2,dplyr,circlize,stringr,purrr,reshape2)
+pacman::p_load(here,rvest,xml2,dplyr,circlize,tidyr,stringr,purrr,magick,reshape2)
 
 # enter vars ----------------------------------------------------
-country <- "japan" # choose country
+country <- "china" # choose country
 event <- "judo" # or choose event 
 by_event <- T # switch between medals by event or country
+
+# source data ---------------------------------------------------
+flags_df <- here::here("r","flags_df.Rda") %>% readRDS()
 
 # vars ----------------------------------------------------------
 base_url <- "https://olympics.com/tokyo-2020/olympic-games"
@@ -18,19 +21,19 @@ flag_url <- "https://www.countryflags.com/icons-overview/"
 col_lab <- "#434343" # sector colour
 colv_label <- c("Gold","Silver","Bronze") # col labels
 colv_pal <- c("#C09F68","#C5C3C3","#AA7C64") # col hex
-height <- 10 # plot dims
-width <- height
+colv_df <- tibble("label" = colv_label,"col" = colv_pal)
+height <- 10; width <- height # plot dims
+
+# webscrape funcs ------------------------------------------------
+get_webdata <- function(att) event_url %>% read_html() %>% html_nodes(".dropdown-link") %>% html_attr(att) %>% return() # pull webdata func
+get_pictogram <- function() pictogram_url %>% read_html() %>% html_nodes(".j-module") # pictogram text and img func 
+get_flag <- function() flag_url %>% read_html() %>% html_nodes(".thumb") # get flag func
+img_convert <- function(img){ # add raster img as chord labels
+  imgr <- img %>% magick::image_read() %>% as.raster() # convert img to raster layer
+  imgr[imgr == "#002163ff"] <- col_lab # change main img color
+  imgr %>% return()} 
 
 # webscrape data ------------------------------------------------
-# pull webdata func
-get_webdata <- function(att){
-  event_url %>% 
-    read_html() %>% 
-    html_nodes(".dropdown-link") %>% 
-    html_attr(att) %>% 
-    return()
-}
-
 # get all countries 
 country_names <- event_url %>% read_html() %>% 
   html_table() %>% .[[1]] %>%
@@ -66,21 +69,22 @@ event_total <- get_webdata("href") %>%
   str_subset("results") %>% 
   str_replace_all("../../..",base_url)
 
+# pictogram text
+pictogram_text <- get_pictogram() %>% 
+  html_nodes("span") %>% html_text() %>% unique
 # hi-res event pictograms 
-pictogram_total <- pictogram_url %>% 
-  read_html() %>% 
-  html_nodes("figure") %>%
-  html_nodes("a") %>%
-  html_attr("data-href") 
+pictogram_total <- get_pictogram() %>% 
+  html_nodes("a") %>% html_attr("data-href") %>% na.omit() %>% .[-1] # remove first header img
+# pictogram id
+pictogram_id <- get_pictogram() %>% 
+  html_nodes("img") %>% html_attr("data-image-id")
+# final pictogram df
+pictogram_df <- tibble("event" = pictogram_text,
+                       "img" = pictogram_total)
 
 # hi-res flags
-flags_total <-  flag_url %>% 
-  read_html() %>% 
-  html_nodes(".thumb") %>%
-  html_nodes("img") %>%
-  html_attr("src") %>% 
-  str_subset(country_title %>% str_to_lower() %>% str_flatten("|"))
-  # str_subset("aust")
+flags_df <- tibble("name" = get_flag() %>% html_nodes("span") %>% html_text() %>% str_remove_all(" flag icon") %>% str_replace_all(" ","-") %>% str_to_lower(),
+                   "flag" = get_flag() %>% html_nodes("img") %>% html_attr("src"))
 
 # medal data by event (table) ----------------------------------------
 if(by_event){
@@ -98,7 +102,7 @@ if(by_event){
     melt() %>%
     tidyr::uncount(value) %>% # expand table by number of each medal 
     select(variable,NOCCode) # reorder for colpal
-  colpal <- c(colv_pal,rep(col_lab,dtab$NOCCode %>% unique %>% length)) # match colpal to data length
+  colpal <- c(colv_pal,rep(col_lab,dtab[,2] %>% unique %>% length)) # match colpal to data length
   }else{
   # medal data by country --------------------------------------------
   # medal count 
@@ -120,12 +124,11 @@ if(by_event){
 } 
 dtab
 
-
 # plot ----------------------------------------------------------
 
 # select either country or event data 
-elist <- readRDS("medals_event.Rda")
-clist <- readRDS("medals_country.Rda")
+elist <- here::here("r","medals_event.Rda") %>% readRDS()
+clist <- here::here("r","medals_country.Rda") %>% readRDS()
 event <- "Diving"
 country <- "Brazil"
 d <- elist[[event]]
@@ -140,9 +143,20 @@ if(by_event){ # use event data
     select(variable,NOCCode) # reorder for colpal
   colpal <- c(colv_pal,rep(col_lab,dtab$NOCCode %>% unique %>% length)) # match colpal to data length
 }else{ # use country data 
-  dtab <- d %>% select(Medal,Sport) %>% table()
-  row.names(dtab) <- colv_label[1:nrow(dtab)] # match row names to no. of rows
-  colpal <- c(colv_pal[1:nrow(dtab)],rep(col_lab,dtab %>% dim %>% max)) # set colpal matching no. of rows/events
+  d <- d %>% 
+    mutate_at("Medal", funs(case_when(
+      Medal == 1 ~ "Gold",
+      Medal == 2 ~ "Silver",
+      Medal == 3 ~ "Bronze"
+    )))
+  dtab <- d %>% 
+    dcast(Sport~Medal, fill = 0) %>% 
+    melt() %>%
+    arrange(desc(value)) %>%
+    uncount(value) %>% # expand table by number of each medal 
+    select(variable,Sport) %>% # reorder for colpal
+    mutate("variable" = factor(variable, levels = colv_label)) %>% arrange(variable) # order by medals
+  colpal <- c(colv_df %>% filter(label %in% dtab$variable) %>% pull,rep(col_lab,dtab[,2] %>% unique %>% length)) # match colpal to data length
 }
 
 require(circlize)
@@ -200,9 +214,6 @@ circos.track(track.index = 1,
 
 dev.off() # close plot save
 cat(rep("\n",3),"Plot saved as",fh %>% paste0(".png in"),here::here())
-flags_total %>% str_subset(country %>% str_to_lower()) # get flag url
-pid <- event_total %>% str_which(event %>% str_to_lower()) 
-pictogram_total[pid[2]] 
 
 # save country/event data to dir  -------------------------------
 # all country data
@@ -222,7 +233,7 @@ for(cn in seq_along(country_title)){
   nn <- country_title[cn] # name each entry
   names(ll) <- nn
   clist <- c(clist,ll)
-  message(nn,"\r",appendLF = F) # display status
+  message(nn,rep(" ",10),"\r",appendLF = F) # display status
   flush.console()
 }
 saveRDS(clist,here::here("r","medals_country.Rda"))
@@ -240,14 +251,12 @@ for(cn in seq_along(event_title)){
            "Gold" = 3,
            "Silver" = 4,
            "Bronze" = 5) %>% 
-    mutate("Event" = event %>% str_to_sentence())
+    mutate("Event" = event_title[cn] %>% str_to_sentence())
   ll <- list(d) # save df 
   nn <- event_title[cn] # name each entry
   names(ll) <- nn
   elist <- c(elist,ll) 
-  message(nn,"\r",appendLF = F) # display status
+  message(nn,rep(" ",10),"\r",appendLF = F) # display status
   flush.console()
 }
 saveRDS(elist,here::here("r","medals_event.Rda"))
-
-
