@@ -27,7 +27,7 @@ output:
       after_body: footer.html
 ---
 
-<link rel="stylesheet"href="//fonts.googleapis.com/css?family=Quicksand:300,400,600,700&amp;lang=en"/>
+<link href="//fonts.googleapis.com/css?family=Quicksand:300,400,600,700&amp;lang=en" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <!-- css for tabs -->
@@ -269,7 +269,7 @@ circos.track(track.index = 1,
 ```
 
 **Option 2**   
-For using differnet images for each plot sector, I used an image list and indexed each list element to correspond to the appropriate plot sector data.       
+For different images for each plot sector, I used an image list of rasters and indexed each list element to correspond to the appropriate plot sector data.         
 
 This example uses event data (Diving as an example) and plots each country's flag as a custom image for the respective sector of the chord plot.    
 
