@@ -27,18 +27,17 @@ output:
       after_body: footer.html
 ---
 
-<!-- to do  -->
-<!-- - for write up, use col/linetype highlighting to show patterns https://jokergoo.github.io/circlize_book/book/the-chorddiagram-function.html -->
-
 <!-- css for tabs -->
 <style type="text/css">
 
 a{
 	color: `r params$primary`;
+	background: none; 
 }
 
 a:hover{ 
 	color: `r params$secondary`;
+	background: none; 
 }
 
 img{
@@ -58,12 +57,30 @@ img{
   color: `r params$secondary`;
 }
 
-.nav-pills>li.active>a{
+.nav-link  {
   background: `r params$primary`;
 }
 
-.nav-pills>li.active>a:hover{
+.nav-pills>li.active {
   background: `r params$primary`;
+}
+
+.nav-pills>li.active>a  {
+  background: `r params$primary`;
+}
+
+.nav-pills>li.active>a:hover {
+  background: `r params$primary`;
+}
+
+.nav-link:(.active){
+  background: `r params$primary`;
+  background-color: `r params$primary`;
+}
+
+.nav-link:not(.active) {
+  background: `r params$primary`;
+  background-color: `r params$primary`;
 }
 
 </style>
@@ -105,11 +122,11 @@ paste0(params$here) %>%
 This project uses webscraping, data analysis, and plotting tools in `R` to access, wrangle, analyse, and plot Tokyo Olympics 2020 medal tally data to generate the graphics used in the below infographic.  
 
 Step-by-step instructions and code are detailed in the header tabs. All code, datasets, and source files are also available on [Github](`r params$github`).    
-<br><br>
+<br>
 
 ### [See full hi-res infographic](`r params$img0`)    
 
-<br><br>
+<br>
 
 <!-- img  -->
 <center><img src=`r params$img1`> </center>
@@ -236,7 +253,7 @@ here::here("plots") %>% list.files() %>% head(20)
 It's also possible to use images as labels for the sectors in chord plots, as well as different images for each sector. 
 
 <!-- img -->
-<center><img class = "remove-border" src=`r params$img3`> </center>
+<center><img class = "remove-border" src=`r params$img3` width = "70%"> </center>
 
 **Option 1**       
 Use the same image for each plot sector.     
