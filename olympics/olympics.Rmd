@@ -27,6 +27,9 @@ output:
       after_body: footer.html
 ---
 
+<link rel="stylesheet"href="//fonts.googleapis.com/css?family=Quicksand:300,400,600,700&amp;lang=en"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 <!-- css for tabs -->
 <style type="text/css">
 
