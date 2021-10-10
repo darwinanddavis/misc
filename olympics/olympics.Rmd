@@ -156,7 +156,7 @@ Step-by-step instructions and code are detailed in the header tabs. All code, da
 
 `R` session   
 ```{r, eval = T, echo = F}
-require(sessioninfo); session_info(include_base = T)
+require(sessioninfo); session_info(include_base = T)  
 ```
 
 Load packages and set data parameters        
