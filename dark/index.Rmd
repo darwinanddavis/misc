@@ -9,7 +9,7 @@ output:
     theme: night
     incremental: true
     center: true
-    transition: slide
+    transition: zoom
     background-transition: fade
     mathjax: local # null
     self_contained: false
